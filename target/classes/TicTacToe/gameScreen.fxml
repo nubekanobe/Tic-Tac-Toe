@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.gameScreen">
+<AnchorPane fx:id="gameArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+   <children>
+      <ImageView disable="true" fitHeight="400.0" fitWidth="600.0" opacity="0.27" pickOnBounds="true">
+         <image>
+            <Image url="@pixelartsky.png" />
+         </image>
+      </ImageView>
+      <Line endX="1.0" layoutX="335.0" layoutY="90.0" startX="1.0" startY="200.0" stroke="#7a4949d2" strokeLineCap="ROUND" strokeMiterLimit="15.0" strokeWidth="20.0">
+         <effect>
+            <Shadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4594883322715759" green="0.19169999659061432" blue="0.7099999785423279" />
+               </color>
+            </Shadow>
+         </effect></Line>
+      <Line endX="1.0" layoutX="255.0" layoutY="90.0" startX="1.0" startY="200.0" stroke="#7a4949d2" strokeLineCap="ROUND" strokeMiterLimit="15.0" strokeWidth="20.0">
+         <effect>
+            <Shadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4594883322715759" green="0.19169999659061432" blue="0.7099999785423279" />
+               </color>
+            </Shadow>
+         </effect></Line>
+      <Line endY="1.0" layoutX="195.0" layoutY="224.0" startX="200.0" startY="1.0" stroke="#7a4949d2" strokeLineCap="ROUND" strokeMiterLimit="15.0" strokeWidth="20.0">
+         <effect>
+            <Shadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4594883322715759" green="0.19169999659061432" blue="0.7099999785423279" />
+               </color>
+            </Shadow>
+         </effect></Line>
+      <Line endY="1.0" layoutX="195.0" layoutY="150.0" startX="200.0" startY="1.0" stroke="#7a4949d2" strokeLineCap="ROUND" strokeMiterLimit="15.0" strokeWidth="20.0">
+         <effect>
+            <Shadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0">
+               <color>
+                  <Color red="0.4594883322715759" green="0.19169999659061432" blue="0.7099999785423279" />
+               </color>
+            </Shadow>
+         </effect></Line>
+      <Button fx:id="OptionsButton" layoutX="449.0" layoutY="320.0" mnemonicParsing="false" onAction="#OptionsButtonClicked" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: linear-gradient(lightblue, lightgrey);" text="Options" textFill="#000000ba">
+         <font>
+            <Font name="Segoe UI Black" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="boardButton1" layoutX="194.0" layoutY="89.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton2" layoutX="256.0" layoutY="89.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="boardButton3" layoutX="337.0" layoutY="89.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="boardButton4" layoutX="195.0" layoutY="150.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="77.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton5" layoutX="255.0" layoutY="153.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="71.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton6" layoutX="337.0" layoutY="150.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="77.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton7" layoutX="195.0" layoutY="226.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton8" layoutX="257.0" layoutY="226.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="boardButton9" layoutX="337.0" layoutY="226.0" mnemonicParsing="false" onAction="#boardButtonClicked" onMouseEntered="#boardButtonHovered" onMouseExited="#boardButtonNotHovered" prefHeight="61.0" prefWidth="60.0" style="-fx-background-color: transparent;">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Label fx:id="currentTurnLabel" layoutX="31.0" layoutY="27.0" opacity="0.8" prefHeight="53.0" prefWidth="152.0" text="Current Turn: X">
+         <font>
+            <Font name="Segoe UI Black" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameCountLabel" layoutX="265.0" layoutY="41.0" opacity="0.8" prefHeight="26.0" prefWidth="79.0" text="GAME ---">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label layoutX="465.0" layoutY="9.0" opacity="0.8" prefHeight="36.0" prefWidth="95.0" text="Games won:">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label fx:id="player1WinsLabel" layoutX="465.0" layoutY="32.0" opacity="0.8" prefHeight="26.0" prefWidth="95.0" text="PLAYER1: ---">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label fx:id="player2WinsLabel" layoutX="465.0" layoutY="54.0" opacity="0.8" prefHeight="26.0" prefWidth="95.0" text="PLAYER2: ---">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Line fx:id="topRow" endX="397.0" endY="119.5" mouseTransparent="true" startX="193.99998474121094" startY="119.5" visible="false" />
+      <Line fx:id="middleRow" endX="457.79998779296875" endY="119.5" layoutX="-1.0" layoutY="69.0" mouseTransparent="true" startX="193.99998474121094" startY="119.5" visible="false" />
+      <Line fx:id="bottomRow" endX="397.0" endY="119.5" layoutX="-1.0" layoutY="137.0" mouseTransparent="true" startX="193.99998474121094" startY="119.5" visible="false" />
+      <Line fx:id="leftColumn" endX="225.0" endY="287.0" mouseTransparent="true" startX="223.99998474121094" startY="89.0" visible="false" />
+      <Line fx:id="middleColumn" endX="225.0" endY="287.0" layoutX="70.0" mouseTransparent="true" startX="223.99998474121094" startY="89.0" visible="false" />
+      <Line fx:id="rightColumn" endX="225.0" endY="287.0" layoutX="142.0" layoutY="2.0" mouseTransparent="true" startX="223.99998474121094" startY="89.0" visible="false" />
+      <Line fx:id="diagonalTopLeftToBottomRight" endX="397.0" endY="287.0" mouseTransparent="true" startX="194.0" startY="89.0" visible="false" />
+      <Line fx:id="diagonalTopRightToBottomLeft" endX="397.0" endY="89.0" mouseTransparent="true" startX="195.0" startY="279.5" visible="false" />
+      <Label fx:id="numOfDrawsLabel" layoutX="465.0" layoutY="80.0" opacity="0.8" text="Draws: ">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font></Label>
+      <Label fx:id="errorLabel" layoutX="14.0" layoutY="9.0" prefHeight="36.0" prefWidth="386.0" style="-fx-background-color: transparent;" textFill="RED" wrapText="true">
+            <font>
+               <Font name="Segoe UI Black" size="12.0" />
+            </font></Label>
+      <Label fx:id="playerNumberLabel" layoutX="14.0" layoutY="369.0" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLabel" layoutX="80.0" layoutY="125.0" mouseTransparent="true" prefHeight="130.0" prefWidth="440.0" style="-fx-background-color: transparent; -fx-alignment: center;">
+         <font>
+            <Font size="90.0" />
+         </font>
+      </Label>
+      <Button fx:id="chatButton" layoutX="530.0" layoutY="108.0" mnemonicParsing="false" onAction="#chatButtonClicked" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: linear-gradient(lightblue, lightgrey);" text="Chat">
+            <effect>
+               <DropShadow />
+            </effect></Button>
+         <Circle fx:id="chatDot" fill="RED" layoutX="570.0" layoutY="118.0" mouseTransparent="true" radius="10.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+            <effect>
+               <BoxBlur height="3.0" width="3.0" />
+            </effect></Circle>
+         <Button fx:id="changeThemeButton" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#changeThemeClicked" prefHeight="36.0" prefWidth="95.0" style="-fx-background-color: linear-gradient(lightblue, lightgrey);" textFill="#000000ba">
+            <font>
+               <Font name="Segoe UI Black" size="15.0" />
+            </font>
+            <effect>
+               <DropShadow />
+            </effect>
+         </Button>
+         <Label fx:id="player1WinsLabel1" layoutX="39.0" layoutY="95.0" opacity="0.8" prefHeight="26.0" prefWidth="45.0" text="THEME">
+            <font>
+               <Font name="Segoe UI Black" size="12.0" />
+            </font>
+         </Label>
+   </children>
+</AnchorPane>
+   <AnchorPane fx:id="chatArea" maxWidth="200.0" prefHeight="400.0" prefWidth="200.0" visible="false">
+      <children>
+         <ImageView disable="true" fitHeight="400.0" fitWidth="200.0" opacity="0.27" pickOnBounds="true">
+            <image>
+               <Image url="@pixelartsky.png" />
+            </image>
+         </ImageView>
+         <TextField fx:id="messageField" layoutX="-1.0" layoutY="328.0" onKeyPressed="#keyPressedInTextEntry" prefHeight="25.0" prefWidth="152.0" style="-fx-background-radius: 10;" />
+         <Button fx:id="sendButton" layoutX="154.0" layoutY="326.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#sendButtonClicked" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: aqua; -fx-border-width: 1.5;">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Polygon fx:id="sendAirplaneOuter" layoutX="171.0" layoutY="351.0" mouseTransparent="true" rotate="90.0" scaleX="0.17" scaleY="0.2" scaleZ="0.2" stroke="BLACK" strokeType="INSIDE">
+            <points>
+               <Double fx:value="-50.0" />
+               <Double fx:value="40.0" />
+               <Double fx:value="50.0" />
+               <Double fx:value="40.0" />
+               <Double fx:value="0.0" />
+               <Double fx:value="-60.0" />
+            </points>
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.06865253299474716" green="0.36629608273506165" blue="0.6447368264198303" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill>
+         </Polygon>
+         <Polygon fx:id="sendAirplaneInner" fill="WHITE" layoutX="169.0" layoutY="351.0" mouseTransparent="true" rotate="90.0" scaleX="0.06" scaleY="0.12" scaleZ="0.12" stroke="WHITE" strokeType="INSIDE">
+            <points>
+               <Double fx:value="-50.0" />
+               <Double fx:value="40.0" />
+               <Double fx:value="50.0" />
+               <Double fx:value="40.0" />
+               <Double fx:value="0.0" />
+               <Double fx:value="-60.0" />
+            </points>
+         </Polygon>
+         <TextArea fx:id="chatBox" editable="false" layoutY="10.0" prefHeight="309.0" prefWidth="188.0" wrapText="true" />
+      </children></AnchorPane>
+</HBox>

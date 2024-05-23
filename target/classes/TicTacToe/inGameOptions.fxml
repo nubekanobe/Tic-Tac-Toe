@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="optionsPane" accessibleRole="IMAGE_VIEW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.inGameOptions">
+   <children>
+      <Label id="titleLabel" layoutX="110.0" layoutY="37.0" prefHeight="38.0" prefWidth="90.0" text="OPTIONS" textAlignment="CENTER" textFill="#000000bd" textOverrun="CLIP">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+      </Label>
+      <Label id="switchLabel" layoutX="30.0" layoutY="91.0" prefHeight="38.0" prefWidth="126.0" text="Switch Sides" textAlignment="CENTER" textFill="#000000be" textOverrun="CLIP">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </Label>
+      <ToggleButton fx:id="sidesOnButton" layoutX="160.0" layoutY="91.0" mnemonicParsing="false" onAction="#sidesOnButtonClicked" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="ON" textFill="#000000bd">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sidesToggle" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="sidesOffButton" layoutX="223.0" layoutY="91.0" mnemonicParsing="false" onAction="#sidesOffButtonClicked" prefHeight="38.0" prefWidth="58.0" style="-fx-background-color: transparent;" text="OFF" textFill="#000000bd" toggleGroup="$sidesToggle">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </ToggleButton>
+      <Label id="musicLabel" layoutX="30.0" layoutY="141.0" prefHeight="38.0" prefWidth="114.0" text="Music" textAlignment="CENTER" textFill="#000000be" textOverrun="CLIP">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </Label>
+      <Label id="soundLabel" layoutX="30.0" layoutY="192.0" prefHeight="38.0" prefWidth="114.0" text="Sound FX" textAlignment="CENTER" textFill="#000000be" textOverrun="CLIP">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </Label>
+      <Slider fx:id="musicSlider" layoutX="160.0" layoutY="153.0" prefHeight="14.0" prefWidth="125.0" value="100.0" />
+      <Slider fx:id="soundSlider" layoutX="160.0" layoutY="204.0" prefHeight="14.0" prefWidth="125.0" value="100.0" />
+      <ParallelCamera />
+      <Button fx:id="quitButton" layoutX="99.0" layoutY="371.0" mnemonicParsing="false" onAction="#quitButtonClicked" prefHeight="38.0" prefWidth="114.0" style="-fx-background-color: pink; -fx-border-color: black;" text="QUIT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.8631578683853149" green="0.03196880966424942" blue="0.03196880966424942" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="clearButton" layoutX="99.0" layoutY="322.0" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="38.0" prefWidth="114.0" style="-fx-background-color: yellow; -fx-border-color: black;" text="CLEAR BOARD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.031578946858644485" green="8.187134517356753E-4" blue="8.187134517356753E-4" opacity="0.7099999785423279" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Label id="difficultyLabel" layoutX="30.0" layoutY="248.0" prefHeight="38.0" prefWidth="114.0" text="Difficulty" textAlignment="CENTER" textFill="#000000be" textOverrun="CLIP">
+         <font>
+            <Font name="Segoe UI Black" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </Label>
+      <ToggleButton fx:id="easyButton" layoutX="154.0" layoutY="248.0" mnemonicParsing="false" onAction="#easyButtonClicked" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="EASY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="difficultyToggle" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="normalButton" layoutX="217.0" layoutY="248.0" mnemonicParsing="false" onAction="#normalButtonClicked" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="NORMAL" toggleGroup="$difficultyToggle">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </ToggleButton>
+      <Button fx:id="CreditsButton" layoutX="8.0" layoutY="390.0" mnemonicParsing="false" onAction="#creditsButtonClicked" prefHeight="41.0" prefWidth="46.0" style="-fx-background-color: MEDIUMSPRINGGREEN; -fx-border-color: black;" text="CREDITS">
+         <font>
+            <Font name="System Bold" size="8.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.031578946858644485" green="8.187134517356753E-4" blue="8.187134517356753E-4" opacity="0.7099999785423279" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

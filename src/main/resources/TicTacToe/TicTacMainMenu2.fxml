@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(white, beige);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.mainMenu">
+   <children>
+      <ImageView fitHeight="428.0" fitWidth="600.0" layoutY="-27.0" mouseTransparent="true">
+         <image>
+            <Image url="@starfall.gif" />
+         </image>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="299.0" layoutY="211.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="96.0" layoutY="75.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="97.0" layoutY="332.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="496.0" layoutY="332.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fill="WHITE" layoutX="187.0" layoutY="87.0" stroke="BLACK" strokeLineJoin="BEVEL" strokeType="INSIDE" text="Tic Tac Toe" textAlignment="CENTER" wrappingWidth="231.087890625">
+         <font>
+            <Font name="Impact" size="33.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="253.0" layoutY="132.0" stroke="BLACK" strokeType="OUTSIDE" text="Choose game type">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font></Text>
+      <Line endX="418.0" endY="329.0" layoutX="152.0" layoutY="54.0" startX="-137.0" startY="-31.0" stroke="#0fff2f" strokeWidth="3.0" />
+      <Line endX="64.0" endY="-46.0" layoutX="499.0" layoutY="75.0" startX="-49.0" startY="53.0" strokeLineCap="ROUND" strokeWidth="25.0" />
+      <Line endX="47.0" endY="-15.0" layoutX="508.0" layoutY="140.0" startX="-55.0" startY="-108.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="25.0" />
+      <Line endX="64.0" endY="-46.0" layoutX="291.0" layoutY="320.0" startX="-49.0" startY="53.0" strokeLineCap="ROUND" strokeWidth="25.0" />
+      <Line endX="47.0" endY="-15.0" layoutX="300.0" layoutY="385.0" startX="-55.0" startY="-108.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="25.0" />
+      <Line endX="64.0" endY="-46.0" layoutX="493.0" layoutY="206.0" startX="-49.0" startY="53.0" strokeLineCap="ROUND" strokeWidth="25.0" />
+      <Line endX="47.0" endY="-15.0" layoutX="504.0" layoutY="272.0" startX="-55.0" startY="-108.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="25.0" />
+      <Line endX="64.0" endY="-46.0" fill="BLACK" layoutX="89.0" layoutY="207.0" startX="-49.0" startY="53.0" strokeLineCap="ROUND" strokeWidth="25.0" />
+      <Line endX="47.0" endY="-15.0" fill="BLACK" layoutX="100.0" layoutY="273.0" startX="-55.0" startY="-108.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="25.0" />
+      <Button fx:id="onePlayerButton" layoutX="263.0" layoutY="175.0" mnemonicParsing="false" onAction="#onePlayerModeClicked" prefHeight="17.0" prefWidth="72.0" text="VS CPU" textOverrun="CLIP" />
+      <Button fx:id="twoPlayerButton" layoutX="263.0" layoutY="223.0" mnemonicParsing="false" onAction="#twoPlayerMode" prefHeight="17.0" prefWidth="72.0" text="2 PLAYER" textFill="#140000" textOverrun="CLIP" />
+      <Button fx:id="exitGame" layoutX="263.0" layoutY="279.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="17.0" prefWidth="72.0" text="Exit Game" textOverrun="CLIP" />
+      <Label fx:id="exitMessage" layoutX="163.0" layoutY="311.0" mouseTransparent="true" prefHeight="82.0" prefWidth="274.0" style="-fx-font-weight: 900; -fx-wrap-text: true;" textFill="#db4105">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label fx:id="errorLabel" layoutX="168.0" layoutY="14.0" prefHeight="40.0" prefWidth="250.0" textFill="RED" wrapText="true" />
+    
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicTacToe.mainMenu">
+   <children>
+      <Text fill="#e81300" layoutX="99.0" layoutY="50.0" stroke="#cc1616" strokeType="OUTSIDE" strokeWidth="2.0" text="WELCOME TO TIC TAC TOE" wrappingWidth="440.53668212890625">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fill="#e81300" layoutX="170.0" layoutY="128.0" stroke="#cc1616" strokeType="OUTSIDE" strokeWidth="2.0" text="Select a Mode to Begin:" wrappingWidth="274.1367492675781">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="onePlayerButton" layoutX="225.0" layoutY="187.0" mnemonicParsing="false" onAction="#onePlayerModeClicked" prefHeight="26.0" prefWidth="147.0" text="One Player (vs. CPU)" />
+      <Button layoutX="225.0" layoutY="229.0" mnemonicParsing="false" onAction="#twoPlayerMode" prefHeight="26.0" prefWidth="147.0" text="Two Player Local" />
+      <Button layoutX="225.0" layoutY="269.0" mnemonicParsing="false" onAction="#exitGame" prefHeight="26.0" prefWidth="147.0" text="Exit Game" />
+      <Label fx:id="exitMessage" layoutX="201.0" layoutY="330.0" prefHeight="44.0" prefWidth="226.0" textFill="#ff0a0a" />
+   </children>
+</AnchorPane>
